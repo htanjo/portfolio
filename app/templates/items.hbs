@@ -1,0 +1,17 @@
+{{#each items}}
+<div class="item" data-name="{{name}}" data-lang='{{language}}' data-date="{{pushed_at}}">
+  <div class="item__inner">
+    <div class="item__icon" style="background:{{language_color}}"></div>
+    <div class="item__details">
+      <div class="item__name">
+        <a href="{{html_url}}">{{name}}</a>
+      </div>
+      <div class="item__description">{{description}}</div>
+      <div class="item__miscs">
+        <div class="item__date">{{pushed_at}}</div>
+        <div class="item__lang">{{language}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{/each}}

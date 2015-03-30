@@ -2,6 +2,16 @@
   "name": "portfolio",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1"
+    "jquery": "~2.1.1",
+    "shufflejs": "~3.1.1",
+    "handlebars": "~3.0.0",
+    "normalize.css": "~3.0.2",
+    "lodash": "~3.6.0",
+    "jquery-animatenumber": "~0.0.10"
+  },
+  "overrides": {
+    "jquery-animatenumber": {
+      "main": "jquery.animateNumber.js"
+    }
   }
 }

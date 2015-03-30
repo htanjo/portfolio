@@ -1,31 +1,132 @@
+@import url("//fonts.googleapis.com/css?family=Open+Sans:600,400");
+
 // bower:scss
 // endbower
 
+$font-size-base: 14px;
+$font-size-large: 16px;
+$font-size-small: 12px;
+
+$column-width: 200px;
+$gutter-width: 50px;
+
 body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+  line-height: 1.4;
+  font-size: $font-size-base;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  background: #fff;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+a {
+  text-decoration: none;
+  color: #08c;
+  &:hover,
+  &:active {
+    text-decoration: underline;
   }
 }
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.container {
+  width: $column-width * 4 + $gutter-width * 3;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: 1250px) {
+    width: $column-width * 5 + $gutter-width * 4;
+  }
+}
+
+.hero {
+  margin: 100px 0 80px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.counter {
+  width: 180px;
+  margin: 10px auto 0;
+  text-align: right;
+  font-size: $font-size-large;
+}
+
+.counter__value {
+  font-size: 48px;
+}
+
+.utilities {
+  margin: 50px 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  &.in {
+    opacity: 1;
+  }
+}
+
+.utility {
+  margin: 10px 0;
+  strong,
+  label {
+    margin-right: 0.5em;
+  }
+}
+
+.items {
+  overflow: hidden;
+  margin: 50px (- $gutter-width / 2);
+}
+
+.item {
+  width: $column-width;
+  margin: 0 ($gutter-width / 2) ($gutter-width * 1.5);
+}
+
+.item__inner {
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(0, 220px);
+  transition: all 0.6s ease;
+  .item.in & {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.item__icon {
+  width: $column-width / 2;
+  height: $column-width / 2;
+  margin: 10px auto 15px;
+  border-radius: 4px;
+}
+
+.item__name {
+  margin: 10px 0;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 18px;
+}
+
+.item__description,
+.item__miscs {
+  margin: 10px 0;
+}
+
+.item__miscs {
+  overflow: hidden;
+  font-size: $font-size-small;
+  color: #aaa;
+}
+
+.item__date {
+  float: left;
+}
+
+.item__lang {
+  float: right;
 }

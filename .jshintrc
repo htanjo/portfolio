@@ -15,5 +15,6 @@
   "undef": true,
   "unused": true,
   "strict": true,
+  "sub": true,
   "jquery": true
 }
